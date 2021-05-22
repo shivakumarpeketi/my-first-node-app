@@ -3,12 +3,12 @@ const express = require('express');
 const router = express.Router();
 
 const addUserGETScript = `<form class="product-form" action="/admin/addUser" method="POST"> 
-                        <div class="form-control">
-                            <label for="title">Title</label>
-                            <input type="text" name="userName" placeholder="User Name">
-                        </div>
-                        <input type="submit" value="Add User">
-                    </form>`;
+                            <div class="form-control">
+                                <label for="title">Title</label>
+                                <input type="text" name="userName" placeholder="User Name">
+                                </div>
+                                <button type="submit">Add User</button>
+                        </form>`;
 const adminHtml = `
 <!DOCTYPE html>
 <html lang="en">
@@ -32,11 +32,6 @@ const adminHtml = `
             </ul>
         </nav>
     </header>`;
-
-const addUserHTMLScript = `<form action="/admin/addUser" method="POST"> 
-                                <input type="text" name="userName" placeholder="User Name">
-                                <input type="submit" value="Add User">
-                            </form>`;
 
 /**
  *   /admin/addUser => GET
