@@ -10,6 +10,10 @@ server.use(express.json()); // to parse json type data
 server.use(express.urlencoded({extended:true})); // TODO find alternative to depricated body-parser
 
 server.use(adminRouter); //order is important
-server.use(defaultRouter);  //the below listner always should be last as it matches any request start with '/'
+server.use(defaultRouter);  //this listner always should be last as its request path matches with any request start with '/'
+
+server.use((req,ress, next) => {
+  ress.status(404).send('<h1> Page Not Found</h2>');
+});
 
 server.listen(4001, ()=> {console.log('Server Ready...!')});
