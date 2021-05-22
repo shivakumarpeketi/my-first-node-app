@@ -1,0 +1,20 @@
+{
+  "name": "my-first-node-app",
+  "version": "1.0.0",
+  "description": "Practise appliction for Node JS",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "start-server": "node app.js"
+  },
+  "author": "Siva Kumar",
+  "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "global": "^4.4.0"
+  }
+}
