@@ -9,7 +9,7 @@ const server = express();
 server.use(express.json()); // to parse json type data
 server.use(express.urlencoded({extended:true})); // TODO find alternative to depricated body-parser
 
-server.use(adminRouter); //order is important
+server.use('/admin', adminRouter); //order is important
 server.use(defaultRouter);  //this listner always should be last as its request path matches with any request start with '/'
 
 server.use((req,ress, next) => {
